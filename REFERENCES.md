@@ -78,16 +78,7 @@ Why I used it: it explains how the official LibreLinkUp sharing works and why re
 The FreeStyle Libre 3 Plus sensor image used on the poster is from Abbott.  
 [Link to the original image](https://s30917.pcdn.co/wp-content/uploads/FSL3Plus_800-600x600.jpg)
 
-## Citation numbers for the poster
-
-Suggested sources for each section:
-
-- CGM in Sport: [1, 4, 5, 8].
-- Experimental Method: [3, 6, 7].
-- Limitations: [1, 2, 4, 5].
-- Data sharing: [9].
-
-Put the source numbers beside the statements they support. The QR code opens this full list. Check that each source supports the specific statement.
+## About these references
 
 These articles provide background for the project. They do not validate the app's automatic feedback. See [How the feedback works](docs/FEEDBACK.md) for the rules used in the app.
 
