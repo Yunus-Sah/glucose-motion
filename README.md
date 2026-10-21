@@ -52,4 +52,4 @@ See [References](REFERENCES.md) for the literature and technical sources support
 
 Version 1.4.1 (build 10). Generic unsigned iPhone build passed during development. Native report rendering and checks covered meal references, reversed selections, profile separation, feedback calculations and unchanged exercise statistics. Full device interaction and service reliability are not established by those checks.
 
-Developed with AI coding assistance; interpretation remains the author's responsibility.
+The app was developed with assistance from OpenAI codex.
