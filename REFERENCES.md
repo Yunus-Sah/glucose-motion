@@ -73,6 +73,13 @@ Abbott Diabetes Care. *LibreLinkUp App User's Manual.*
 
 Why I used it: it explains how the official LibreLinkUp sharing works and why readings can be delayed. Glucose Motion uses an unofficial connection. This manual does not describe or approve that connection.
 
+### 10. Skin and sensor diagram
+
+Abbott Diabetes Care. *Sensor Application & Adhesion Guide*. 2024. Document ADC-22195 v6.0, page 4.  
+[Abbott guide containing the diagram](https://www.freestyle.abbott/content/dam/adc/freestyle/countries/us-en/documents/freestyle-libre-sensor-adhesion-guide.pdf)
+
+Image credit: the skin and sensor diagram on the poster is from Abbott Diabetes Care. It shows the sensor, cells, interstitial fluid and blood.
+
 ## Image source
 
 The FreeStyle Libre 3 Plus sensor image used on the poster is from Abbott.  
