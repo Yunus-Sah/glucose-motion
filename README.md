@@ -1,55 +1,63 @@
 # Glucose Motion
 
-### From wearable glucose data to understandable athlete feedback
+An iPhone app that combines glucose readings with meals and exercise. It helps the user understand what happened before, during and after a workout.
 
-A native iPhone prototype that brings glucose readings, meal timing and exercise into one journal. Built by **Yunus Emre Sahin**, MSc Sports Technology, KTH Royal Institute of Technology, for an exploratory N=1 project.
+Created by **Yunus Emre Sahin**, MSc Sports Technology student at KTH Royal Institute of Technology.
 
-**Research question:** How can continuous glucose monitoring data be transformed into understandable feedback for an athlete?
+**Research question:** How can continuous glucose monitoring (CGM) data be turned into clear feedback for an athlete?
 
 [References](REFERENCES.md) · [How the feedback works](docs/FEEDBACK.md) · [Privacy and data](PRIVACY.md)
 
-## What the app does
+## Main features
 
-- Displays recent interstitial glucose readings, with graph ranges from 15 minutes to 24 hours.
-- Records meals, exercise and fasting with timestamps and notes.
-- Imports glucose using CSV, pasted readings or manual entry.
-- Optionally receives cloud readings through an **unofficial LibreLinkUp connection** while the app is open.
-- Compares two workouts on one timeline aligned to exercise start, with meal markers and a shared glucose scale.
-- Calculates first/last exercise readings, change, minimum, maximum and arithmetic mean.
-- Describes patterns during exercise and the available follow-up, then explains what can and cannot be inferred.
-- Exports a complete comparison image for a research poster and supports local JSON backups.
+- View glucose graphs from the last 15 minutes up to 24 hours.
+- Log meals, exercise and fasting with times and notes.
+- Add glucose readings from a CSV file, paste them, or enter them by hand.
+- Connect to LibreLinkUp to receive readings while the app is open. This connection is unofficial.
+- Compare two workouts in one graph, with colours for each session and markers for meals and exercise.
+- See start and end glucose, change, minimum, maximum and average.
+- Get simple feedback about glucose changes during and after exercise.
+- Save a comparison image for a poster and export backups.
 
-## Contribution
+## What this project adds
 
-The prototype adds recorded context and transparent interpretation to a glucose curve. It identifies which session had a rise or fall, when the meal occurred relative to exercise, and whether comparable follow-up data show different endpoint changes. It separates observed differences from hypotheses about their causes.
+A glucose graph shows how readings change over time. This app also shows when the user ate and exercised. It then explains the observed pattern in words.
 
-The exploratory evaluation used two strength-training sessions in one participant. This is a demonstration of the measurement-to-feedback workflow, not a validation of a meal-timing strategy. Personal glucose recordings and account credentials are not included in this repository.
+For example, it can describe a fall during the first part of a workout, a rise towards the end, or a larger drop after one session than another. It also explains when there is not enough data for a fair comparison.
 
-## Run in Xcode
+For this student project, I collected data from two strength-training sessions on myself. This small study shows how the app works. It cannot prove that meal timing caused a difference or that one timing is best. Personal glucose data and login details are not included here.
 
-1. Clone or download this repository and open `GlucoseMotion.xcodeproj`.
-2. Choose the GlucoseMotion target. Under Signing & Capabilities, select your own development team and a unique bundle identifier.
-3. Select an iPhone running iOS 17 or later and Run.
-4. Add a demo session in Settings, import readings, or optionally configure LibreLinkUp.
+## Open the app in Xcode
 
-No third-party Swift packages are required. The app uses SwiftUI, Swift Charts, Foundation, Security and CryptoKit. It is an Xcode source project; an App Store/TestFlight release is not supplied.
+1. Download or clone this repository. Open `GlucoseMotion.xcodeproj` in Xcode.
+2. Select the GlucoseMotion target. In Signing & Capabilities, choose your development team and a unique bundle identifier (the app's ID).
+3. Select an iPhone with iOS 17 or later and click Run.
+4. In Settings, add a demo session. You can also import readings or connect to LibreLinkUp.
 
-**Existing installation:** preserve your original signing team and bundle identifier if updating your own installed copy. Back up your records first. The public project intentionally has no development team selected.
+The app uses SwiftUI and Swift Charts. It needs no extra Swift packages. This repository contains the Xcode project, not an App Store or TestFlight download.
 
-## Optional LibreLinkUp connection
+**If you already have the app:** keep the same development team and app ID when updating it. Export a backup first. The public project has no development team selected.
 
-Use the receiving account that already sees the shared profile in the official LibreLinkUp app. A valid sharing relationship and completion of any Abbott account steps are required. Select the shared profile after signing in.
+## LibreLinkUp connection
 
-This integration is unofficial, depends on Abbott's cloud service, and can stop working if the service changes. It is not direct sensor access, an official public Abbott SDK, or a continuous iOS background service. The password is used for sign-in and is not saved by the app; the session credential is stored in the iPhone Keychain. CSV/manual import remains available.
+Use the receiving account that can already see your shared glucose data in the official LibreLinkUp app. Complete any account steps requested by Abbott, then sign in and select your shared profile.
 
-## Scope
+The connection uses Abbott's cloud service. It does not connect directly to the sensor. It is unofficial and may stop working if Abbott changes the service. Updates run while the app is open, not continuously in the background.
 
-Experimental prototype, not medically validated. Feedback describes recorded interstitial glucose. It does not diagnose, prescribe carbohydrate intake, establish fasting safety, or demonstrate performance optimisation. Recorded timestamps are not shifted to compensate for physiological or cloud delay. Two sessions cannot isolate meal timing as the cause of a difference.
+The app does not save your password. It stores the login token in the iPhone Keychain, Apple's secure storage. You can still import readings without this connection.
 
-See [References](REFERENCES.md) for the literature and technical sources supporting the project's background and limitations. This student project is not affiliated with or endorsed by Abbott or KTH.
+## Limits
 
-## Development and validation
+This is an experimental app. It has not been medically validated.
 
-Version 1.4.1 (build 10). Generic unsigned iPhone build passed during development. Native report rendering and checks covered meal references, reversed selections, profile separation, feedback calculations and unchanged exercise statistics. Full device interaction and service reliability are not established by those checks.
+It describes glucose measured in interstitial fluid, the fluid between cells. It does not give medical advice, recommend carbohydrate amounts, judge whether fasting is safe, or prove better sports performance.
+
+The app keeps the original reading times. It does not move the readings to correct for sensor or cloud delay. Two sessions are not enough to show that meal timing caused a glucose change.
+
+See the [references](REFERENCES.md) for the research behind the project. This is an independent student project. Abbott and KTH have not endorsed the app.
+
+## Development
+
+Version 1.4.1, build 10. The iPhone project built successfully during development. Checks covered the calculations, meal times, session selection and separation of different profiles. The comparison image was also checked. These checks do not prove that every action works on a real iPhone or that cloud updates are always reliable.
 
 The app was developed with assistance from OpenAI codex.

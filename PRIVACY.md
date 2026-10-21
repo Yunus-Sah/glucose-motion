@@ -1,7 +1,18 @@
-# Privacy and local data
+# Privacy and data
 
-This source repository contains no participant glucose backups, patient identifiers, login tokens or passwords.
+This repository does not include personal glucose backups, patient IDs, passwords or login tokens.
 
-In the app, session and event records are saved locally. Cloud readings are cached for up to 30 days separately by shared profile; saved session readings remain until deleted. Login credentials use the iPhone Keychain. The password is not saved by the app. The optional cloud connection sends authentication requests directly to Abbott services. There is no project-operated backend.
+## Where the app saves data
 
-Exported JSON backups and comparison images can contain sensitive health information and timestamps. Decide where to store or share them. Keep personal backups outside the source repository. Deleting the app can remove its local files; retain backups before changing installations.
+- Meals, exercise and saved sessions are stored on the phone.
+- Downloaded cloud readings are kept for up to 30 days, separately for each shared profile.
+- Readings saved in a session stay until that session is deleted.
+- The login token is stored in the iPhone Keychain, Apple's secure storage. The app does not save the password.
+
+If you use LibreLinkUp, the app sends login requests to Abbott's service. This project has no separate server.
+
+## Backups and sharing
+
+Exported backups and comparison images may contain health information and exact times. Choose carefully where you save or share them. Keep personal backups outside this repository.
+
+Deleting the app can remove its local files. Export a backup before changing or deleting your installation.
