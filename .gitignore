@@ -1,0 +1,17 @@
+# Xcode and local build state
+.DS_Store
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcarchive
+*.ipa
+*.dSYM/
+# Personal records and credentials
+study*.json
+context-events*.json
+libre-cache*.json
+.env
+.env.*
+*.p12
+*.mobileprovision
